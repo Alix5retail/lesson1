@@ -12,17 +12,13 @@ public class Main {
             int a = Integer.parseInt(bufferedReader.readLine());
             int b = Integer.parseInt(bufferedReader.readLine());
             int c = Integer.parseInt(bufferedReader.readLine());
-            int smallest;
+            int[] numbers = {a, b, c};
+            int min = numbers[0];
 
-            if (a <= b && a <= c) {
-                smallest = a;
-            } else if (b <= a && b <= c) {
-                smallest = b;
-            } else {
-                smallest = c;
+            for (int n : numbers) {
+                min = Math.min(min, n);
             }
-            System.out.println("Наименьшее из введённых цифр: " + smallest);
-
+            System.out.println("Наименьшее из введённых цифр: " + min);
         } catch (NumberFormatException e) {
             System.out.println("Допустимо вводить только цифры!");
         }

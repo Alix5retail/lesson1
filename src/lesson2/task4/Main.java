@@ -12,16 +12,13 @@ public class Main {
             int inputNumber = Integer.parseInt(bufferedReader.readLine());
 
             if (inputNumber > 0) {
-                inputNumber += 1;
-                System.out.println(inputNumber);
+                inputNumber++;
             } else if (inputNumber < 0) {
                 inputNumber = inputNumber - 2;
-                System.out.println(inputNumber);
             } else {
                 inputNumber = 10;
-                System.out.println(inputNumber);
             }
-
+            System.out.println(inputNumber);
         } catch (NumberFormatException e) {
             System.out.println("Допустимо вводить только цифры!");
         }

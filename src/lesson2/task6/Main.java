@@ -10,23 +10,23 @@ public class Main {
         try {
             System.out.println("Введите число:");
             int inputNumber = Integer.parseInt(bufferedReader.readLine());
+            boolean isNumberEven = false;
 
-            if (inputNumber > 0) {
-                if (inputNumber % 2 == 0) {
-                    System.out.println("Число положительное и четное: " + inputNumber);
-                } else {
-                    System.out.println("Число положительное и нечетное: " + inputNumber);
-                }
-            } else if (inputNumber < 0) {
-                if (inputNumber % 2 == 0) {
-                    System.out.println("Число отрицательное и четное: " + inputNumber);
-                } else {
-                    System.out.println("Число отрицательное и нечетное: " + inputNumber);
-                }
+            if (inputNumber % 2 == 0) {
+                isNumberEven = true;
+            }
+
+            if (inputNumber > 0 && isNumberEven) {
+                System.out.println("Число положительное и четное: " + inputNumber);
+            } else if (inputNumber > 0) {
+                System.out.println("Число положительное и нечетное: " + inputNumber);
+            } else if (inputNumber < 0 && isNumberEven){
+                System.out.println("Число отрицательное и четное: " + inputNumber);
+            } else if (inputNumber < 0){
+                System.out.println("Число отрицательное и нечетное: " + inputNumber);
             } else {
                 System.out.println("Число нулевое: " + inputNumber);
             }
-
         } catch (NumberFormatException e) {
             System.out.println("Допустимо вводить только цифры!");
         }
