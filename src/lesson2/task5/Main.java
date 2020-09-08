@@ -15,9 +15,12 @@ public class Main {
             int[] numbers = {a, b, c};
             int min = numbers[0];
 
-            for (int n : numbers) {
-                min = Math.min(min, n);
+            for (int number : numbers) {
+                if (min > number) {
+                    min = number;
+                }
             }
+
             System.out.println("Наименьшее из введённых цифр: " + min);
         } catch (NumberFormatException e) {
             System.out.println("Допустимо вводить только цифры!");
