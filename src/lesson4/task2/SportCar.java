@@ -3,7 +3,6 @@ package lesson4.task2;
 public class SportCar extends Car {
     private double speed;
 
-
     public SportCar(String model, String classAuto, int weight, Engine engine, double speed) {
         super(model, classAuto, weight, engine);
         this.speed = speed;
