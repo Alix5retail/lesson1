@@ -2,11 +2,12 @@ package lesson3.animal;
 
 public class Animal {
 
-    public String food;
-    public String location;
+    private String food;
+    private String location;
 
-    public Animal(String food) {
+    public Animal(String food, String location) {
         this.food = food;
+        this.location = location;
     }
 
     public String getLocation() {

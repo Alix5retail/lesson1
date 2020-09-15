@@ -2,13 +2,12 @@ package lesson3.animal;
 
 public class Cat extends Animal {
 
-    public String location = "Британии";
     private String name;
     private String food;
     private String noise;
 
-    public Cat(String name, String noise, String food) {
-        super(food);
+    public Cat(String name, String noise, String food, String location) {
+        super(food, location);
         this.food = food;
         this.name = name;
         this.noise = noise;
@@ -31,6 +30,6 @@ public class Cat extends Animal {
 
     @Override
     public String getLocation() {
-        return location;
+        return super.getLocation();
     }
 }

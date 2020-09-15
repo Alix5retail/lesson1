@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal[] animals = {new Cat("Leopold", "Мяукает", "Кошачий корм"),
-                new Dog("Mikki", "Гавкает", "Собачий корм"),
-                new Horse("Jack", "Кричит", "Лощадинный корм")};
+        Animal[] animals = {new Cat("Leopold", "Мяукает", "Кошачий корм", "Британии"),
+                new Dog("Mikki", "Гавкает", "Собачий корм", "Америки"),
+                new Horse("Jack", "Кричит", "Лощадинный корм", "России")};
 
         Vet vet = new Vet();
 
