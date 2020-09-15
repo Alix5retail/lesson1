@@ -2,8 +2,11 @@ package lesson3.studentandaspirant;
 
 public class Aspirant extends Student {
 
-    public Aspirant(String fistName, String lastName, String group, double averageMark) {
+    private String scientificWork;
+
+    public Aspirant(String fistName, String lastName, String group, double averageMark, String scientificWork) {
         super(fistName, lastName, group, averageMark);
+        this.scientificWork = scientificWork;
     }
 
     @Override
