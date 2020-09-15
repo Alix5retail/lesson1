@@ -1,5 +1,7 @@
 package lesson3.phone;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,34 +9,41 @@ public class Main {
         Phone iphone6 = new Phone();
         Phone iphone7 = new Phone();
 
-        iphone5.setModel("Iphone 5");
-        iphone5.setNumber(88001001);
-        iphone5.setWeight(120);
-        System.out.println(iphone5.getModel());
-        System.out.println(iphone5.getNumber());
-        System.out.println(iphone5.getWeight());
-        iphone5.receiveCall("Ali", 88001001);
-        System.out.println();
-
-        iphone6.setModel("Iphone 6");
-        iphone6.setNumber(88001002);
-        iphone6.setWeight(121);
-        System.out.println(iphone6.getModel());
-        System.out.println(iphone6.getNumber());
-        System.out.println(iphone6.getWeight());
-        iphone5.receiveCall("Steve", 88001002);
-        System.out.println();
-
-
-        iphone7.setModel("Iphone 7");
-        iphone7.setNumber(88001003);
-        iphone7.setWeight(122);
-        System.out.println(iphone7.getModel());
-        System.out.println(iphone7.getNumber());
-        System.out.println(iphone7.getWeight());
-        iphone5.receiveCall("Mike", 88001003);
-
         Phone iphone8 = new Phone(88001004, "Iphone 8");
         Phone iphone10 = new Phone(88001005, "Iphone 10", 123);
+
+        ArrayList<Phone> phones = new ArrayList<>();
+        phones.add(iphone5);
+        phones.add(iphone6);
+        phones.add(iphone7);
+
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Ali");
+        names.add("Steve");
+        names.add("Mike");
+
+        int countOfIphoneModel = 5;
+        int countOfNumbers = 88000001;
+        int countOfWeight = 120;
+        int countOfNames = 0;
+
+        for (Phone i : phones) {
+            i.setModel("Iphone" + countOfIphoneModel);
+            i.setNumber(countOfNumbers);
+            i.setWeight(countOfWeight);
+            i.receiveCall(names.get(countOfNames), countOfNumbers);
+            countOfIphoneModel++;
+            countOfNumbers++;
+            countOfWeight++;
+            countOfNames++;
+            System.out.println();
+        }
+
+        for (Phone i : phones) {
+            System.out.println(i.getModel());
+            System.out.println(i.getNumber());
+            System.out.println(i.getWeight());
+            System.out.println();
+        }
     }
 }
